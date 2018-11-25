@@ -12,15 +12,13 @@ import java.lang.Math;
  public class RealCompass {
 
 	public static void main(String[] args) throws Exception {
-		// let character = Character()
-		// Character character = new Character();
 		CompassMindSensor compass = new CompassMindSensor(SensorPort.S1);
 		compass.resetCartesianZero();
 
 		// flip the motor if you want to compass mode!
 		NXTMotor motor = new NXTMotor(MotorPort.A);
 		motor.resetTachoCount();
-		motor.setPower(10);
+		motor.setPower(0);
 		
 		float lastDegree = compass.getDegrees();
 		int ledDisplayInterval = 500;
